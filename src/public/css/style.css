@@ -1,0 +1,222 @@
+body {
+  background-image: url(../assets/forest_background.jpg);
+}
+
+#toDoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 250px;
+  width: 600px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  border-radius: 5%;
+  background-color: #13232f;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#toDoContainer h1 {
+  font-weight: bold;
+  text-align: center;
+  margin-left: 3%;
+}
+
+#taskInputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10%;
+}
+
+#ipt-taskname {
+  width: 50%;
+  height: 26px;
+  font-size: 18px;
+  font-family: inherit;
+  color: #ffffff;
+  background-color: #13232f;
+  border: 1px solid #9ca0a0;
+  border-width: thin;
+  -webkit-transition: border-color .25s ease, -webkit-box-shadow .25s ease;
+  transition: border-color .25s ease, -webkit-box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease, -webkit-box-shadow .25s ease;
+  padding-left: 10px;
+  margin-top: 4%;
+}
+
+#ipt-taskname:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+
+#priorityButtons {
+  font-size: 10px;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+#priorityButtons label {
+  padding-left: 10px;
+}
+
+.spn-highpri {
+  color: #EF4444;
+}
+
+.spn-medpri {
+  color: #e9e334;
+}
+
+.spn-lowpri {
+  color: #1ab188;
+}
+
+#toDoContainer #btn-addtask {
+  background-color: #1ab188;
+  border-radius: 5%;
+  width: 10%;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+#toDoContainer #btn-addtask:hover {
+  background-color: #138566;
+  color: #ffffff;
+}
+
+#toDoContainer #btn-addtask:active {
+  border: 1px solid #1ab188;
+  outline: 0;
+}
+
+#toDoContainer #btn-addtask:focus {
+  outline: 0;
+}
+
+#ul-tasks {
+  border: 1px solid #1ab188;
+  padding-bottom: 50px;
+  list-style-type: none;
+  text-align: center;
+  margin-right: 8%;
+  margin-left: 9%;
+}
+
+#ul-tasks span {
+  text-decoration: underline;
+  margin-right: 10%;
+}
+
+#ul-tasks label {
+  padding-left: 5px;
+}
+
+#ul-tasks li .itemButtons {
+  display: inline;
+  padding-left: 10px;
+}
+
+#ul-tasks li .itemButtons .btn-edit-task, #ul-tasks li .itemButtons .btn-delete-task {
+  background-color: #1ab188;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  border-radius: 5%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+#ul-tasks li .itemButtons .btn-edit-task:active, #ul-tasks li .itemButtons .btn-delete-task:active {
+  border: 1px solid #1ab188;
+}
+
+#ul-tasks li .itemButtons .btn-edit-task:hover, #ul-tasks li .itemButtons .btn-delete-task:hover {
+  background-color: #138566;
+  color: #ffffff;
+}
+
+#ul-tasks li .itemButtons .btn-edit-task:focus, #ul-tasks li .itemButtons .btn-delete-task:focus {
+  outline: 0;
+}
+
+#ul-tasks li .itemButtons .btn-delete-task {
+  margin-left: 1%;
+}
+
+.taskName.high {
+  color: #EF4444;
+}
+
+.taskName.medium {
+  color: #e9e334;
+}
+
+.taskName.low {
+  color: #1ab188;
+}
+
+.bottom-row {
+  display: table;
+  font-family: "Montserrat", sans-serif;
+}
+
+.bottom-row .table-cell {
+  display: table-cell;
+}
+
+.bottom-row button {
+  font-family: "Montserrat", sans-serif;
+  background-color: #1ab188;
+  color: #ffffff;
+  border: none;
+  margin-top: 4%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.bottom-row button:active {
+  border: 1px solid #1ab188;
+}
+
+.bottom-row button:hover {
+  background-color: #138566;
+  color: #ffffff;
+}
+
+.bottom-row button:focus {
+  outline: 0;
+}
+
+.bottom-row #btn-logout {
+  margin-left: 40px;
+  height: 25px;
+}
+
+.bottom-row #btn-delete-completed-tasks {
+  margin-right: 175px;
+  height: 25px;
+}
+
+.bottom-row #priorityKey {
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.bottom-row #priorityKey li {
+  font-size: 10px;
+  list-style-type: none;
+}
+/*# sourceMappingURL=style.css.map */
