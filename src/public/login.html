@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="form">
+
+        <div class="tab-group">
+            <button class="active" type="button" id="btn-show-login">Log In</button>
+            <button class="inactive" type="button" id="btn-show-signup">Sign Up</button>
+        </div>
+
+        <div class="tab-content">
+            <div class="active" id="login">
+                <form action="/users/login" method="post" autocomplete="off">
+                    <h1>Welcome Back!</h1>
+                    <label for="ipt-username">Username: </label>
+                    <input name="username" type="text" placeholder="Enter Username" id="ipt-login-username"
+                        required><br>
+
+                    <label for="ipt-password">Password: </label>
+                    <input name="password" type="password" placeholder="Enter Password" id="ipt-login-password"
+                        required><br>
+
+                    <button type="submit" id="btn-login">Login</button><br>
+                </form>
+            </div>
+
+            <div class="inactive" id="signup" style="display: none;">
+                <h1>Sign Up for Free</h1>
+                <form action="/users/register" method="post" autocomplete="off">
+                    <div class="top-row">
+                        <div class="table-cell">
+                            <label for="ipt-first_name">First Name: </label>
+                            <input name="firstname" type="text" placeholder="Enter First Name" id="ipt-first_name"
+                                required><br>
+                        </div>
+                        <div class="table-cell">
+                            <label for="ipt-last_name">Last Name: </label>
+                            <input name="lastname" type="text" placeholder="Enter Last Name" id="ipt-last_name"
+                                required><br>
+                        </div>
+                    </div>
+                    <label for="ipt-username">Username: </label>
+                    <input name="username" type="text" placeholder="Enter Username" id="ipt-signup-username" required>
+                    <br>
+
+                    <label for="ipt-password">Password: </label>
+                    <input name="password" type="password" placeholder="Enter Password" id="ipt-signup-password"
+                        required> <br>
+
+                    <button type="submit" id="btn-signup">Get Started</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</body>
+
+</html>

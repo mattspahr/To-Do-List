@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>To-Do List</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="toDoContainer">
+
+        <h3>To-Do List</h3>
+
+        <div id="taskInput">
+
+            <input id="ipt-taskname" type="text" placeholder="Enter Task">
+
+            <div id="priorityButtons">
+                <label>Priority:</label><br>
+
+                <input id="btn-highpri" type="radio" name="priority" value="high">
+                <span id="spn-highpri">High</span><br>
+                <input id="btn-medpri" type="radio" name="priority" value="medium">
+                <span id="spn-medPri">Medium</span><br>
+                <input id="btn-lowpri" type="radio" name="priority" value="low">
+                <span id="spn-lowPri">Low</span> <br>
+
+            </div>
+            <button id="btn-addtask">ADD</button>
+
+        </div>
+
+        <div id="taskList">
+
+            <ul id="ul-tasks"><span>Tasks:</span></ul>
+
+        </div>
+
+        <button id="btn-delete-completed-tasks">Clear Completed Tasks</button>
+
+        <ul id="priorityKey">
+            <li>High Priority: <span id='spn-high'>Red</span> </li>
+            <li>Medium Priority: <span id='spn-med'>Yellow</span> </li>
+            <li>Low Priority: <span id='spn-low'>Green</span> </li>
+        </ul>
+
+        <form action="/users/logout" method="GET">
+            <button id="btn-logout" type="submit">logout</button>
+        </form>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+#toDoContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  width: 400px;
+
+  text-align: center;
+
+  border-radius: 20%;
+
+  background-color: white;
+
+  font-family: 'Mansalva', cursive;
+
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+}
+
+#toDoContainer h3 {
+  font-weight: bold;
+
+  text-align: center;
+
+  margin-left: 3%;
+}
+
+#taskInput {
+    display: flex;
+
+    margin-left: 10%;
+}
+
+#ipt-taskname {
+  width: 50%;
+
+  height: 20px;
+  font-family: inherit;
+
+  border-color: black;
+  border-width: thin;
+
+  padding-left: 10px;
+
+  margin-top: 6%;
+}
+
+#priorityButtons {
+    font-size: 10px;
+
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+#priorityButtons label {
+    padding-left: 10px;
+}
+
+#spn-highpri {
+    color: #EF4444;
+}
+
+#spn-medpri {
+    color: #D4CE1D;
+}
+
+#spn-lowpri {
+    color: #84CB86;
+}
+
+#toDoContainer #btn-addtask {
+  background-color: green;
+  border-radius: 30%;
+  width: 10%;
+
+  border: none;
+
+  font-family: 'Mansalva', cursive;
+
+  color: white;
+}
+
+#toDoContainer #btn-addtask:hover {
+  background-color: white;
+
+  color: green;
+}
+
+#toDoContainer #btn-addtask:active {
+  border: 1px solid green;
+}
+
+#toDoContainer #taskOutput {
+  width: 90%;
+  height: 90px;
+
+  resize: none;
+
+  text-align: left;
+  vertical-align: top;
+  padding: 0;
+
+  margin-left: 3%;
+
+  border-color: black;
+  border-width: thin;
+}
+
+#tasks {
+  border: 1px solid black;
+  padding-bottom: 50px;
+
+  list-style-type: none;
+
+  text-align: center;
+
+  margin-right: 8%;
+  margin-left: 9%;
+}
+
+#tasks span {
+  text-decoration: underline;
+
+  margin-right: 10%;
+}
+
+#tasks label {
+  padding-left: 5px;
+  padding-right:  10px;
+
+  text-decoration: none;
+}
+
+.taskName.high {
+    color: #EF4444;
+}
+
+.taskName.medium {
+    color: #D4CE1D;
+}
+
+.taskName.low {
+    color: #84CB86;
+}
+
+#tasks li .itemButtons {
+    display: inline;
+}
+
+#tasks li .editButton, #tasks li .deleteButton, #clearTaskButton {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: blue;
+  font-family: 'Mansalva', cursive;
+}
+
+#tasks li .editButton:hover, #tasks li .deleteButton:hover, #clearTaskButton:hover{
+  background-color: #CAC9C9
+}
+
+#tasks li .editButton:active, #tasks li .deleteButton:active, #clearTaskButton:active {
+  background-color: #8E8E8E;
+  box-shadow: 0 5px #666;
+  transform: translateY(1px);
+}
+
+#clearTaskButton {
+    width: 30%;
+
+    margin-left: 35%;
+}
+
+#priorityKey li {
+  font-size: 10px;
+
+  list-style-type: none;
+}
+
+#spn-high {
+    color: #EF4444;
+}
+
+#spn-med {
+    color: #D4CE1D;
+}
+
+#spn-low {
+    color: #84CB86;
+}
+
+body {
+  background: grey;
+}

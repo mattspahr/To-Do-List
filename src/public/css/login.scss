@@ -1,0 +1,148 @@
+$main-font: 'Montserrat', sans-serif;
+
+$main: #1ab188;
+$main-light: lighten($main,10%);
+$main-dark: darken($main,10%);
+
+$body-bg: #c1bdba;
+$form-bg: #13232f;
+$white: #ffffff;
+
+$gray-light: #9ca0a0;
+$gray: #ddd;
+
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+	overflow-y: scroll; 
+}
+
+body {
+    background-image: url('../assets/forest_background.jpg');
+    background-color: $body-bg;
+    color: $white;
+    font-family: $main-font;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus,
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $form-bg inset !important;
+    -webkit-text-fill-color: $white !important;
+}
+
+.form .tab-group button {
+    display: inline-block;
+    color: $gray-light;
+    background-color: $main-dark;
+    font-family: $main-font;
+    transition:.5s ease;
+    text-align: center; 
+}
+
+.form {  
+    background:rgba($form-bg,.9);
+    padding: 40px;
+    max-width:600px;
+    margin:40px auto;
+    border-radius:$br;
+    box-shadow:0 4px 10px 4px rgba($form-bg,.3);
+}
+
+.tab-group {
+    list-style:none;
+    padding:0;
+    margin:0 0 40px 0;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    button {
+      display: block;
+      text-decoration: none;
+      padding: 15px;
+      background: rgba($gray-light,.25);
+      color: $gray-light;
+      font-size: 20px;
+      float: left;
+      width: 50%;
+      text-align: center;
+      cursor: pointer;
+      transition: .5s ease;
+    }
+    button:hover {
+        background: $main-dark;
+        color: white;
+    }
+    button:focus {
+        outline: 0;
+    }
+    button.active {
+        background:$main;
+        color:$white;
+    }
+}
+
+.top-row {
+    display: table;
+    .table-cell {
+        display: table-cell;
+        #ipt-first_name {
+            width: 94%;
+            margin-right: 4%;
+        }
+    }
+}
+
+#login input, #signup input {
+    font-size: 22px;
+    font-family: $main-font;
+    background-color: $form-bg;
+    display: block;
+    margin: 8px;
+    box-sizing: border-box;
+    color: $white;
+    width:100%;
+    height:100%;
+    padding:5px 10px;
+    background:none;
+    background-image:none;
+    border:1px solid $gray-light;
+    color:$white;
+    border-radius:0;
+    transition: border-color .25s ease, box-shadow .25s ease;
+    &:focus {
+	    	outline:0;
+	    	border-color:$main;
+    }   
+
+}
+
+#btn-login, #btn-signup {
+    display: block;
+    width: 100%;
+    border:0;
+    outline:none;
+    border-radius:0;
+    padding:15px 0;
+    font-size:2rem;
+    font-weight:$bold;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    background:$main;
+    color:$white;
+    transition: all .5s ease;
+    &:hover, &:focus {
+      background:$main-dark;
+    }
+}
