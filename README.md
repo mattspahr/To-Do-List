@@ -15,7 +15,7 @@ Capabilities:
 
 Technologies used:
 -
-- SCSS
+- Sass
 - JQuery
 - Passport.js
 - Node.js
@@ -26,3 +26,10 @@ Future features planned:
 -
 - Add custom error messages on login errors
 - Username included in To-Do-List title
+
+### **Screenshots**
+
+![Login Page](/Screenshots/login-page-SS.png)
+
+![App Page](/Screenshots/app-page-SS.png)
+
