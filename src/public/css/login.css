@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -8,7 +10,7 @@ html {
 }
 
 body {
-  background-image: url("../assets/forest_background.jpg");
+  background-image: url(../assets/forest_background.jpg);
   background-color: #c1bdba;
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
@@ -28,8 +30,8 @@ input:-webkit-autofill {
   color: #9ca0a0;
   background-color: #138566;
   font-family: "Montserrat", sans-serif;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   text-align: center;
 }
 
@@ -50,7 +52,7 @@ input:-webkit-autofill {
 }
 
 .tab-group:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -66,8 +68,8 @@ input:-webkit-autofill {
   width: 50%;
   text-align: center;
   cursor: pointer;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .tab-group button:hover {
@@ -97,7 +99,8 @@ input:-webkit-autofill {
   margin-right: 4%;
 }
 
-#login input, #signup input {
+#login input,
+#signup input {
   font-size: 22px;
   font-family: "Montserrat", sans-serif;
   background-color: #13232f;
@@ -114,18 +117,20 @@ input:-webkit-autofill {
   border: 1px solid #9ca0a0;
   color: #ffffff;
   border-radius: 0;
-  -webkit-transition: border-color .25s ease, -webkit-box-shadow .25s ease;
-  transition: border-color .25s ease, -webkit-box-shadow .25s ease;
-  transition: border-color .25s ease, box-shadow .25s ease;
-  transition: border-color .25s ease, box-shadow .25s ease, -webkit-box-shadow .25s ease;
+  -webkit-transition: border-color 0.25s ease, -webkit-box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, -webkit-box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, -webkit-box-shadow 0.25s ease;
 }
 
-#login input:focus, #signup input:focus {
+#login input:focus,
+#signup input:focus {
   outline: 0;
   border-color: #1ab188;
 }
 
-#btn-login, #btn-signup {
+#btn-login,
+#btn-signup {
   display: block;
   width: 100%;
   border: 0;
@@ -135,14 +140,16 @@ input:-webkit-autofill {
   font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   background: #1ab188;
   color: #ffffff;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-#btn-login:hover, #btn-login:focus, #btn-signup:hover, #btn-signup:focus {
+#btn-login:hover, #btn-login:focus,
+#btn-signup:hover,
+#btn-signup:focus {
   background: #138566;
 }
 /*# sourceMappingURL=login.css.map */

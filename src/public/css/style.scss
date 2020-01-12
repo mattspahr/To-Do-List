@@ -1,8 +1,8 @@
 $main-font: 'Montserrat', sans-serif;
 
 $main: #1ab188;
-$main-light: lighten($main,10%);
-$main-dark: darken($main,10%);
+$main-light: lighten($main, 10%);
+$main-dark: darken($main, 10%);
 
 $body-bg: #c1bdba;
 $form-bg: #13232f;
@@ -11,7 +11,7 @@ $white: #ffffff;
 $gray-light: #9ca0a0;
 $gray: #ddd;
 
-$high-pri: #EF4444;
+$high-pri: #ef4444;
 $med-pri: rgb(233, 227, 52);
 $low-pri: $main;
 
@@ -21,38 +21,37 @@ $bold: 600;
 $br: 4px;
 
 body {
-  background-image: url(../assets/forest_background.jpg);
-
+    background-image: url(../assets/forest_background.jpg);
 }
 
 #toDoContainer {
-  display: flex;
-  flex-direction: column;
-  min-height: 250px;
-  width: 600px;
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+    width: 600px;
 
-  text-align: center;
-  font-family: $main-font;
-  color: $white;
+    text-align: center;
+    font-family: $main-font;
+    color: $white;
 
-  border-radius: 5%;
+    border-radius: 5%;
 
-  background-color: $form-bg;
+    background-color: $form-bg;
 
-  position: absolute;
-  top: 15px;
-  left: 0;
-  right: 0;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
 
-  margin: auto;
+    margin: auto;
 }
 
 #toDoContainer h1 {
-  font-weight: bold;
+    font-weight: bold;
 
-  text-align: center;
+    text-align: center;
 
-  margin-left: 3%;
+    margin-left: 3%;
 }
 
 #taskInputContainer {
@@ -62,25 +61,25 @@ body {
 }
 
 #ipt-taskname {
-  width: 50%;
+    width: 50%;
 
-  height: 26px;
-  font-size: 18px;
-  font-family: inherit;
-  color: $white;
+    height: 26px;
+    font-size: 18px;
+    font-family: inherit;
+    color: $white;
 
-  background-color: $form-bg;
-  border: 1px solid $gray-light;
-  border-width: thin;
-  transition: border-color .25s ease, box-shadow .25s ease;
-  &:focus {
-    outline:0;
-    border-color:$main;
-  }
+    background-color: $form-bg;
+    border: 1px solid $gray-light;
+    border-width: thin;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    &:focus {
+        outline: 0;
+        border-color: $main;
+    }
 
-  padding-left: 10px;
+    padding-left: 10px;
 
-  margin-top: 4%;
+    margin-top: 4%;
 }
 
 #priorityButtons {
@@ -107,78 +106,79 @@ body {
 }
 
 #toDoContainer #btn-addtask {
-  background-color: $main;
-  border-radius: 5%;
-  width: 10%;
+    background-color: $main;
+    border-radius: 5%;
+    width: 10%;
 
-  border: none;
+    border: none;
 
-  font-family: $main-font;
+    font-family: $main-font;
 
-  color: white;
+    color: white;
 
-  transition: .5s ease;
+    transition: 0.5s ease;
 
-  &:hover {
-    background-color: $main-dark;
-    color: $white;
-  }
-  &:active{
-    border: 1px solid $main;
-    outline: 0;
-  }
-  &:focus{
-    outline: 0;
-  }
+    &:hover {
+        background-color: $main-dark;
+        color: $white;
+    }
+    &:active {
+        border: 1px solid $main;
+        outline: 0;
+    }
+    &:focus {
+        outline: 0;
+    }
 }
 
 #ul-tasks {
-  border: 1px solid $main;
-  padding-bottom: 50px;
+    border: 1px solid $main;
+    padding-bottom: 50px;
 
-  list-style-type: none;
+    list-style-type: none;
 
-  text-align: center;
+    text-align: center;
 
-  margin-right: 8%;
-  margin-left: 9%;
+    margin-right: 8%;
+    margin-left: 9%;
 
-  span {
-    text-decoration: underline;
-  
-    margin-right: 10%;
-  }
+    span {
+        text-decoration: underline;
 
-  label {
-    padding-left: 5px;
-  }
-
-  li .itemButtons {
-    display: inline;
-    padding-left: 10px;
-
-    .btn-edit-task, .btn-delete-task {
-      background-color: $main;
-      color: $white;
-      font-family: $main-font;  
-      border: none;
-      border-radius: 5%;
-      transition: .5s ease;
-      &:active {
-        border: 1px solid $main;
-      }
-      &:hover {
-        background-color: $main-dark;
-        color: $white;
-      }
-      &:focus {
-        outline: 0;
-      }
+        margin-right: 10%;
     }
-    .btn-delete-task {
-      margin-left: 1%;
+
+    label {
+        padding-left: 5px;
     }
-  } 
+
+    li .itemButtons {
+        display: inline;
+        padding-left: 10px;
+
+        .btn-edit-task,
+        .btn-delete-task {
+            background-color: $main;
+            color: $white;
+            font-family: $main-font;
+            border: none;
+            border-radius: 5%;
+            transition: 0.5s ease;
+            &:active {
+                border: 1px solid $main;
+            }
+            &:hover {
+                background-color: $main-dark;
+                color: $white;
+            }
+            &:focus {
+                outline: 0;
+            }
+        }
+        .btn-delete-task {
+            margin-left: 1%;
+        }
+    }
 }
 
 .taskName.high {
@@ -194,44 +194,39 @@ body {
 }
 
 .bottom-row {
-  display: table;
-  font-family: $main-font;
-  .table-cell {
-    display: table-cell;
-  }
-  button {
+    display: table;
     font-family: $main-font;
-    background-color: $main;
-    color: $white;
-    border: none;
-    margin-top: 4%;
-    transition: .5s ease;
-    &:active {
-      border: 1px solid $main;
+    .table-cell {
+        display: table-cell;
     }
-    &:hover {
-      background-color: $main-dark;
-      color: $white;
+    button {
+        font-family: $main-font;
+        background-color: $main;
+        color: $white;
+        border: none;
+        margin-top: 4%;
+        transition: 0.5s ease;
+        &:active {
+            border: 1px solid $main;
+        }
+        &:hover {
+            background-color: $main-dark;
+            color: $white;
+        }
+        &:focus {
+            outline: 0;
+        }
     }
-    &:focus {
-      outline: 0;
+    #btn-logout {
+        margin-bottom: 15px;
+        margin-left: 40px;
+        margin-right: 2px;
+        height: 25px;
     }
-  }
-  #btn-logout {
-    margin-left: 40px;
-    height: 25px;
-  }
-  #btn-delete-completed-tasks {
-    margin-right:175px;
-    height: 25px;
-  }
-
-  #priorityKey {
-    padding-right: 20px;
-    padding-bottom: 10px;
-    li {
-      font-size: 10px;
-      list-style-type: none;
+    #btn-delete-completed-tasks {
+        margin-bottom: 15px;
+        margin-right: 350px;
+        margin-left: 2px;
+        height: 25px;
     }
-  }
 }

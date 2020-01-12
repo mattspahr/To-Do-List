@@ -1,12 +1,11 @@
 const express = require('express');
 const uuid = require('uuid');
-const path = require('path');
 const router = express.Router();
 var db = require('../../config/db.js');
 
 // Get all tasks for user
 router.get('/', (req, res) => {
-    let sql = 'SELECT * FROM tasks WHERE user_id = ?'
+    let sql = 'SELECT * FROM tasks WHERE user_id = ?';
     let query = db.query(sql, req.user.id, (err, result) => {
         if (err) throw err;
         res.json({
@@ -23,9 +22,16 @@ router.post('/', (req, res) => {
         description: req.body.description,
         priority: req.body.priority,
         status: req.body.status
-    }
-    if (newTask.description == ' ' || newTask.priority == '' || !newTask.description || !newTask.priority) {
-        res.status(400).json({ msg: 'Please enter a description and priority' })
+    };
+    if (
+        newTask.description == ' ' ||
+        newTask.priority == '' ||
+        !newTask.description ||
+        !newTask.priority
+    ) {
+        res.status(400).json({
+            msg: 'Please enter a description and priority'
+        });
     } else {
         let sql = 'INSERT INTO tasks SET ?';
         let query = db.query(sql, newTask, (err, result) => {
@@ -47,7 +53,7 @@ router.delete('/:id', (req, res) => {
         res.json({
             msg: 'Task Deleted',
             result
-        })
+        });
     });
 });
 
@@ -59,7 +65,7 @@ router.delete('/', (req, res) => {
         res.json({
             msg: 'Tasks Deleted',
             result
-        })
+        });
     });
 });
 
@@ -67,23 +73,31 @@ router.delete('/', (req, res) => {
 router.put('/:id', (req, res) => {
     if (req.body.description) {
         let sql = 'UPDATE tasks SET description = ? WHERE id = ?';
-        let query = db.query(sql, [req.body.description, req.params.id], (err, result) => {
-            if (err) throw err;
-            res.json({
-                msg: 'Task edited',
-                result
-            });
-        });
+        let query = db.query(
+            sql,
+            [req.body.description, req.params.id],
+            (err, result) => {
+                if (err) throw err;
+                res.json({
+                    msg: 'Task edited',
+                    result
+                });
+            }
+        );
     }
     if (req.body.status) {
         let sql = 'UPDATE tasks SET status = ? WHERE id = ?';
-        let query = db.query(sql, [req.body.status, req.params.id], (err, result) => {
-            if (err) throw err;
-            res.json({
-                msg: 'Task status changed',
-                result
-            })
-        });
+        let query = db.query(
+            sql,
+            [req.body.status, req.params.id],
+            (err, result) => {
+                if (err) throw err;
+                res.json({
+                    msg: 'Task status changed',
+                    result
+                });
+            }
+        );
     }
 });
 

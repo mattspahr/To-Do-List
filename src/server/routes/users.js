@@ -23,10 +23,10 @@ router.post('/register', (req, res) => {
         res.send(errors);
     } else {
         // Validation passed
-        let sql = 'SELECT username FROM users WHERE username = ?'
+        let sql = 'SELECT username FROM users WHERE username = ?';
         let query = db.query(sql, username, (err, result) => {
             if (result.length > 0) {
-                errors.push({ msg: "Username taken!" });
+                errors.push({ msg: 'Username taken!' });
                 res.send(errors);
             } else {
                 let newUser = {
@@ -34,20 +34,21 @@ router.post('/register', (req, res) => {
                     lastname: lastname,
                     username: username,
                     password: password
-                }
+                };
 
-                bcrypt.genSalt(10, (err, salt) => bcrypt.hash(newUser.password, salt,
-                    (err, hash) => {
+                bcrypt.genSalt(10, (err, salt) =>
+                    bcrypt.hash(newUser.password, salt, (err, hash) => {
                         if (err) throw err;
                         // Set password to hashed
                         newUser.password = hash;
-                        sql = 'INSERT INTO users SET ?'
+                        sql = 'INSERT INTO users SET ?';
                         query = db.query(sql, newUser, (err, result) => {
                             if (err) throw err;
                             console.log(result);
                             res.redirect('/login.html');
                         });
-                    }));
+                    })
+                );
             }
         });
     }

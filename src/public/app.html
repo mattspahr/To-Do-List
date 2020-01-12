@@ -1,66 +1,70 @@
 <!DOCTYPE html>
 
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>To-Do List</title>
 
-<head>
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-    <meta charset="utf-8">
-    <title>To-Do List</title>
+    <body>
+        <div id="toDoContainer">
+            <h1>To-Do List</h1>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+            <div id="taskInputContainer">
+                <input id="ipt-taskname" type="text" placeholder="Enter Task" />
 
-</head>
+                <div id="priorityButtons">
+                    <label>Priority:</label><br />
 
-<body>
-
-    <div id="toDoContainer">
-
-        <h3>To-Do List</h3>
-
-        <div id="taskInput">
-
-            <input id="ipt-taskname" type="text" placeholder="Enter Task">
-
-            <div id="priorityButtons">
-                <label>Priority:</label><br>
-
-                <input id="btn-highpri" type="radio" name="priority" value="high">
-                <span id="spn-highpri">High</span><br>
-                <input id="btn-medpri" type="radio" name="priority" value="medium">
-                <span id="spn-medPri">Medium</span><br>
-                <input id="btn-lowpri" type="radio" name="priority" value="low">
-                <span id="spn-lowPri">Low</span> <br>
-
+                    <input
+                        id="btn-highpri"
+                        type="radio"
+                        name="priority"
+                        value="high"
+                    />
+                    <span class="spn-highpri">High</span><br />
+                    <input
+                        id="btn-medpri"
+                        type="radio"
+                        name="priority"
+                        value="medium"
+                    />
+                    <span class="spn-medpri">Medium</span><br />
+                    <input
+                        id="btn-lowpri"
+                        type="radio"
+                        name="priority"
+                        value="low"
+                    />
+                    <span class="spn-lowpri">Low</span> <br />
+                </div>
+                <button id="btn-addtask">ADD</button>
             </div>
-            <button id="btn-addtask">ADD</button>
 
+            <div id="taskList">
+                <ul id="ul-tasks">
+                    <span>Tasks:</span>
+                </ul>
+            </div>
+
+            <div class="bottom-row">
+                <form class="table-cell" action="/users/logout" method="GET">
+                    <button id="btn-logout" type="submit">Logout</button>
+                </form>
+                <button class="table-cell" id="btn-delete-completed-tasks">
+                    Clear Completed Tasks
+                </button>
+            </div>
         </div>
 
-        <div id="taskList">
-
-            <ul id="ul-tasks"><span>Tasks:</span></ul>
-
-        </div>
-
-        <button id="btn-delete-completed-tasks">Clear Completed Tasks</button>
-
-        <ul id="priorityKey">
-            <li>High Priority: <span id='spn-high'>Red</span> </li>
-            <li>Medium Priority: <span id='spn-med'>Yellow</span> </li>
-            <li>Low Priority: <span id='spn-low'>Green</span> </li>
-        </ul>
-
-        <form action="/users/logout" method="GET">
-            <button id="btn-logout" type="submit">logout</button>
-        </form>
-
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-
-</body>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
 </html>

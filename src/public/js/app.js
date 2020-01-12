@@ -235,4 +235,6 @@ $(document).ready(() => {
     $('#btn-delete-completed-tasks').click(function () {
         deleteAllCompleteTasks();
     });
+
+
 });
