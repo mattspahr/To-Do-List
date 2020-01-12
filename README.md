@@ -29,4 +29,7 @@ Future features planned:
 
 ### **Screenshots**
 
-![Login Page](/Screenshots/login-page-SS.jpg)
+![Login Page](/Screenshots/login-page-SS.png)
+
+![App Page](/Screenshots/app-page-SS.png)
+
