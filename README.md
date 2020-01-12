@@ -15,7 +15,7 @@ Capabilities:
 
 Technologies used:
 -
-- SCSS
+- Sass
 - JQuery
 - Passport.js
 - Node.js
