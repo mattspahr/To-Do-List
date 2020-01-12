@@ -26,3 +26,7 @@ Future features planned:
 -
 - Add custom error messages on login errors
 - Username included in To-Do-List title
+
+### **Screenshots**
+
+![Login Page](/Screenshots/login-page-SS.jpg)
